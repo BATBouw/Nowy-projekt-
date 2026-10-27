@@ -6,12 +6,12 @@
     <title>BAT Bouw | Uw Professionele Aannemer</title>
     <style>
         :root {
-            --primary: #1e293b; /* Ekskluzywny grafit (Slate 800) */
-            --accent: #f59e0b;  /* Budowlany złoty pomarańcz */
+            --primary: #1e293b; 
+            --accent: #f59e0b;  
             --text-dark: #334155;
             --bg-light: #f8fafc;
             --white: #ffffff;
-            --success: #16a34a; /* Profesjonalna zieleń dla przycisków kontaktu */
+            --success: #16a34a; 
         }
 
         * {
@@ -28,7 +28,6 @@
             line-height: 1.6;
         }
 
-        /* Menu / Nawigacja */
         header {
             background-color: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(10px);
@@ -80,11 +79,10 @@
             border-radius: 6px;
         }
 
-        /* Banner Główny (Hero) */
         .hero {
             background: linear-gradient(rgba(30, 41, 59, 0.85), rgba(30, 41, 59, 0.7)), 
                         url('https://unsplash.com') no-repeat center center/cover;
-            height: 80vh;
+            height: 70vh;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -153,9 +151,8 @@
             color: var(--primary);
         }
 
-        /* O Firmie / Opis Główny */
         .about {
-            padding: 6rem 2rem;
+            padding: 5rem 2rem;
             max-width: 1000px;
             margin: 0 auto;
             text-align: center;
@@ -183,10 +180,17 @@
             margin: 0 auto;
         }
 
-        /* Sekcja: 6 Powodów */
         .reasons-section {
             background-color: var(--bg-light);
-            padding: 6rem 2rem;
+            padding: 5rem 2rem;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.3rem;
+            color: var(--primary);
+            margin-bottom: 3.5rem;
+            font-weight: 800;
         }
 
         .reasons-grid {
@@ -195,7 +199,6 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 2.5rem;
-            margin-top: 3rem;
         }
 
         .reason-card {
@@ -204,7 +207,6 @@
             border-radius: 8px;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
             border-left: 4px solid var(--accent);
-            text-align: left;
         }
 
         .reason-card h4 {
@@ -219,37 +221,8 @@
             font-size: 1rem;
         }
 
-        /* Sekcja Usługi Kafelkowe */
-        .services-section {
-            padding: 6rem 2rem;
-        }
-
-        .services-grid {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 2.5rem;
-        }
-
-        .service-card {
-            background: var(--bg-light);
-            padding: 3rem 2rem;
-            border-radius: 8px;
-            text-align: center;
-            border-top: 4px solid var(--primary);
-        }
-
-        .service-card h3 {
-            margin-bottom: 1rem;
-            color: var(--primary);
-            font-size: 1.4rem;
-        }
-
-        /* Sekcja Kontakt i Formularz (Split Layout) */
         .contact-section {
-            padding: 6rem 2rem 4rem;
-            background-color: var(--white);
+            padding: 5rem 2rem 4rem;
         }
 
         .contact-container {
@@ -302,7 +275,6 @@
             background-color: #15803d;
         }
 
-        /* Formularz */
         .contact-form {
             background-color: var(--bg-light);
             padding: 3rem;
@@ -352,7 +324,6 @@
             background-color: #0f172a;
         }
 
-        /* Sekcja z Mapą Google */
         .map-section {
             width: 100%;
             height: 400px;
@@ -365,7 +336,6 @@
             border: none;
         }
 
-        /* Stopka */
         footer {
             background-color: var(--primary);
             color: var(--white);
@@ -378,3 +348,39 @@
             display: flex;
             justify-content: space-between;
             flex-wrap: wrap;
+            gap: 2rem;
+            border-bottom: 1px solid #334155;
+            padding-bottom: 2rem;
+        }
+
+        .footer-legal p {
+            font-size: 0.95rem;
+            color: #94a3b8;
+            margin-bottom: 0.4rem;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 2rem;
+            font-size: 0.9rem;
+            color: #64748b;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.2rem; }
+            .hero p { font-size: 1.1rem; }
+            nav a:not(.btn-nav) { display: none; }
+            .contact-form { padding: 1.5rem; }
+            .map-section { height: 300px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="nav-container">
+            <div class="logo">BAT <span>Bouw</span></div>
+            <nav>
+                <a href="#home">Home</a>
+                <a href="#over-ons">Over ons</a>
+                <a href="#waarom-wij">Waarom wij</a>
