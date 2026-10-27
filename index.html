@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Uw Professionele Aannemer | Bouw & Renovatie</title>
+    <title>BAT Bouw | Professionele Aannemer</title>
     <style>
         :root {
-            --primary: #1e3a8a; /* Głęboki granat korporacyjny */
-            --secondary: #f59e0b; /* Profesjonalny budowlany pomarańcz/żółć */
+            --primary: #111827; /* Nowoczesny, profesjonalny grafit */
+            --secondary: #eab308; /* Wyrazisty żółty budowlany / kolor marki */
             --dark: #1f2937;
-            --light: #f3f4f6;
+            --light: #f9fafb;
             --white: #ffffff;
         }
 
@@ -29,7 +29,7 @@
         /* Nawigacja */
         header {
             background-color: var(--white);
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
             position: fixed;
             width: 100%;
             top: 0;
@@ -46,9 +46,11 @@
         }
 
         .logo {
-            font-size: 1.5rem;
-            font-weight: bold;
+            font-size: 1.4rem;
+            font-weight: 800;
             color: var(--primary);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
 
         .logo span {
@@ -59,32 +61,28 @@
             text-decoration: none;
             color: var(--dark);
             margin-left: 1.5rem;
-            font-weight: 500;
+            font-weight: 600;
             transition: color 0.3s;
-        }
-
-        nav a:hover {
-            color: var(--primary);
         }
 
         .btn-nav {
             background-color: var(--secondary);
-            color: var(--white) !important;
-            padding: 0.5rem 1rem;
+            color: var(--primary) !important;
+            padding: 0.6rem 1.2rem;
             border-radius: 4px;
         }
 
-        /* Hero Section */
+        /* Hero Section ze zdjęciem w tle */
         .hero {
-            background: linear-gradient(rgba(30, 58, 138, 0.85), rgba(31, 41, 55, 0.85)), url('https://unsplash.com') no-repeat center center/cover;
-            height: 80vh;
+            background: linear-gradient(rgba(17, 24, 39, 0.85), rgba(31, 41, 55, 0.85)), url('https://unsplash.com') no-repeat center center/cover;
+            height: 75vh;
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
             color: var(--white);
             padding: 0 2rem;
-            margin-top: 70px;
+            margin-top: 60px;
         }
 
         .hero-content {
@@ -93,7 +91,7 @@
 
         .hero h1 {
             font-size: 3rem;
-            margin-bottom: 1.5rem;
+            margin-bottom: 1rem;
             font-weight: 800;
         }
 
@@ -106,7 +104,7 @@
         .btn-main {
             display: inline-block;
             background-color: var(--secondary);
-            color: var(--white);
+            color: var(--primary);
             text-decoration: none;
             padding: 0.8rem 2rem;
             font-size: 1.1rem;
@@ -116,12 +114,26 @@
         }
 
         .btn-main:hover {
-            background-color: #d97706;
+            background-color: #ca8a04;
+        }
+
+        /* O Firmie */
+        .about {
+            padding: 5rem 2rem 2rem;
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .about h2 {
+            font-size: 2.2rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
         }
 
         /* Usługi */
         .services {
-            padding: 5rem 2rem;
+            padding: 3rem 2rem 5rem;
             max-width: 1200px;
             margin: 0 auto;
         }
@@ -131,16 +143,6 @@
             font-size: 2.2rem;
             color: var(--primary);
             margin-bottom: 3rem;
-            position: relative;
-        }
-
-        .section-title::after {
-            content: '';
-            display: block;
-            width: 60px;
-            height: 4px;
-            background-color: var(--secondary);
-            margin: 10px auto 0;
         }
 
         .grid {
@@ -152,8 +154,8 @@
         .card {
             background: var(--light);
             padding: 2.5rem 2rem;
-            border-radius: 8px;
-            border-top: 5px solid var(--primary);
+            border-radius: 6px;
+            border-top: 4px solid var(--secondary);
             transition: transform 0.3s;
         }
 
@@ -166,9 +168,88 @@
             color: var(--primary);
         }
 
-        /* Stopka z wymogami prawnymi NL */
-        footer {
+        /* Sekcja Kontakt */
+        .contact-section {
+            background-color: var(--light);
+            padding: 5rem 2rem;
+        }
+
+        .contact-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+        }
+
+        .contact-info h2 {
+            font-size: 2.2rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary);
+        }
+
+        .info-block {
+            margin-bottom: 1.5rem;
+        }
+
+        .info-block h6 {
+            font-size: 1rem;
+            color: #4b5563;
+            text-transform: uppercase;
+            margin-bottom: 0.25rem;
+        }
+
+        .info-block p, .info-block a {
+            font-size: 1.2rem;
+            color: var(--primary);
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .info-block a.phone-link {
+            color: #16a34a; /* Zielony kolor wyróżniający opcję dzwonienia */
+            display: inline-block;
+            border-bottom: 2px dashed #16a34a;
+        }
+
+        /* Formularz kontaktowy */
+        .contact-form h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.2rem;
+        }
+
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #d1d5db;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+
+        .btn-submit {
+            background-color: var(--primary);
+            color: var(--white);
+            border: none;
+            padding: 0.8rem 2rem;
+            font-size: 1rem;
+            font-weight: bold;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+            transition: background 0.3s;
+        }
+
+        .btn-submit:hover {
             background-color: var(--dark);
+        }
+
+        /* Stopka */
+        footer {
+            background-color: var(--primary);
             color: var(--white);
             padding: 3rem 2rem 1.5rem;
         }
@@ -202,57 +283,62 @@
 
     <header>
         <div class="nav-container">
-            <div class="logo">Bouw<span>Meester</span></div>
+            <div class="logo">BAT <span>Bouw</span></div>
             <nav>
                 <a href="#home">Home</a>
+                <a href="#over-ons">Over ons</a>
                 <a href="#diensten">Diensten</a>
-                <a href="#contact" class="btn-nav">Gratis Offerte</a>
+                <a href="#contact" class="btn-nav">Contact</a>
             </nav>
         </div>
     </header>
 
     <section class="hero" id="home">
         <div class="hero-content">
-            <h1>Uw professionele aannemer voor bouw en renovatie</h1>
-            <p>Van advies tot oplevering: wij realiseren uw woondromen met oog voor detail en echt vakmanschap.</p>
-            <a href="#contact" class="btn-main">Vraag een gratis offerte aan</a>
+            <h1>Professionele aannemer</h1>
+            <p>Kwaliteit, betrouwbaarheid en echt vakmanschap. Wij realiseren uw grote en kleine projecten van A tot Z.</p>
+            <a href="tel:+31600000000" class="btn-main">Bel direct</a>
         </div>
+    </section>
+
+    <section class="about" id="over-ons">
+        <h2>Over het bedrijf</h2>
+        <p>Sinds 2018 zijn wij actief in de algemene bouw- en renovatiesector in heel Nederland. Dankzij onze jarenlange ervaring leveren wij topkwaliteit, strakke afwerking en betrouwbaarheid. Ons ervaren team van vakmensen en timmerlieden staat klaar om uw project professioneel uit te voeren. Wij werken in opdracht van zowel particuliere klanten als grote en kleine bedrijven. Wij denken graag met u mee!</p>
     </section>
 
     <section class="services" id="diensten">
-        <h2 class="section-title">Onze Diensten</h2>
+        <h2 class="section-title">Onze Werkzaamheden</h2>
         <div class="grid">
             <div class="card">
-                <h3>🏠 Aanbouw & Uitbouw</h3>
-                <p>Meer leefruimte creëren? Wij realiseren uw uitbouw of aanbouw volledig op maat, van fundering tot dak.</p>
+                <h3>🔨 Renovatie & Verbouw</h3>
+                <p>Complete modernisering en verbouwing van uw woning, appartement of bedrijfspand met een strak resultaat.</p>
             </div>
             <div class="card">
-                <h3>🛠️ Totaalrenovatie</h3>
-                <p>Complete renovatie van uw woning of appartement. Wij moderniseren uw vastgoed vakkundig van A tot Z.</p>
+                <h3>📐 Timmer- & Schilderwerk</h3>
+                <p>Vakkundig timmerwerk op maat en professioneel binnen- en buitenschilderwerk van hoge kwaliteit.</p>
             </div>
             <div class="card">
-                <h3>🛁 Badkamer & Sanitair</h3>
-                <p>Realisatie van moderne, luxe en functionele badkamers inclusief loodgieterswerk en professioneel tegelzetten.</p>
+                <h3>🧱 Tegels & Constructies</h3>
+                <p>Nauwkeurig tegelzetten, kabelvervanging en de realisatie van diverse grote en kleine bouwconstructies.</p>
             </div>
         </div>
     </section>
 
-    <footer>
-        <div class="footer-content">
-            <div>
-                <h4>BouwMeester B.V.</h4>
-                <p>Uw betrouwbare bouwpartner.</p>
-            </div>
-            <div class="footer-legal">
-                <h4>Bedrijfsgegevens</h4>
-                <p>KvK-nummer: 12345678</p>
-                <p>BTW-nummer: NL876543210B01</p>
-            </div>
-        </div>
-        <div class="copyright">
-            &copy; 2026 BouwMeester B.V. Alle rechten voorbehouden.
-        </div>
-    </footer>
+    <section class="contact-section" id="contact">
+        <div class="contact-container">
+            <div class="contact-info">
+                <h2>Contacten</h2>
+                
+                <div class="info-block">
+                    <h6>Telefoon</h6>
+                    <!-- Funkcja Click-to-Call: Zastąp +31600000000 swoim numerem -->
+                    <p><a href="tel:+31600000000" class="phone-link">Bel vandaag nog</a></p>
+                </div>
 
-</body>
-</html>
+                <div class="info-block">
+                    <h6>E-mail</h6>
+                    <p><a href="mailto:info@batperfectbouw.nl">info@batperfectbouw.nl</a></p>
+                </div>
+
+                <div class="info-block">
+                    <h6>Werkuren</h6>
