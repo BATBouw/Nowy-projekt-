@@ -3,37 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BAT Bouw | Professionele Aannemer</title>
+    <title>BAT Bouw | Uw Professionele Aannemer</title>
     <style>
         :root {
-            --primary: #111827; /* Nowoczesny, profesjonalny grafit */
-            --secondary: #eab308; /* Wyrazisty żółty budowlany / kolor marki */
-            --dark: #1f2937;
-            --light: #f9fafb;
+            --primary: #1e293b; /* Ekskluzywny grafit (Slate 800) */
+            --accent: #f59e0b;  /* Budowlany złoty pomarańcz */
+            --text-dark: #334155;
+            --bg-light: #f8fafc;
             --white: #ffffff;
+            --success: #16a34a; /* Profesjonalna zieleń dla przycisków kontaktu */
         }
 
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            scroll-behavior: smooth;
         }
 
         body {
-            color: var(--dark);
+            color: var(--text-dark);
             background-color: var(--white);
             line-height: 1.6;
         }
 
-        /* Nawigacja */
+        /* Menu / Nawigacja */
         header {
-            background-color: var(--white);
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            background-color: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05);
             position: fixed;
             width: 100%;
             top: 0;
             z-index: 1000;
+            border-bottom: 1px solid #e2e8f0;
         }
 
         .nav-container {
@@ -42,47 +46,52 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 1rem 2rem;
+            padding: 1.2rem 2rem;
         }
 
         .logo {
             font-size: 1.4rem;
-            font-weight: 800;
+            font-weight: 900;
             color: var(--primary);
             text-transform: uppercase;
             letter-spacing: 0.5px;
         }
 
         .logo span {
-            color: var(--secondary);
+            color: var(--accent);
         }
 
         nav a {
             text-decoration: none;
-            color: var(--dark);
+            color: var(--primary);
             margin-left: 1.5rem;
             font-weight: 600;
-            transition: color 0.3s;
+            transition: color 0.2s;
+        }
+
+        nav a:hover {
+            color: var(--accent);
         }
 
         .btn-nav {
-            background-color: var(--secondary);
-            color: var(--primary) !important;
+            background-color: var(--primary);
+            color: var(--white) !important;
             padding: 0.6rem 1.2rem;
-            border-radius: 4px;
+            border-radius: 6px;
         }
 
-        /* Hero Section ze zdjęciem w tle */
+        /* Banner Główny (Hero) */
         .hero {
-            background: linear-gradient(rgba(17, 24, 39, 0.85), rgba(31, 41, 55, 0.85)), url('https://unsplash.com') no-repeat center center/cover;
-            height: 75vh;
+            background: linear-gradient(rgba(30, 41, 59, 0.85), rgba(30, 41, 59, 0.7)), 
+                        url('https://unsplash.com') no-repeat center center/cover;
+            height: 80vh;
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
             color: var(--white);
             padding: 0 2rem;
-            margin-top: 60px;
+            margin-top: 70px;
         }
 
         .hero-content {
@@ -90,132 +99,192 @@
         }
 
         .hero h1 {
-            font-size: 3rem;
+            font-size: 3.2rem;
             margin-bottom: 1rem;
             font-weight: 800;
+            line-height: 1.2;
         }
 
         .hero p {
-            font-size: 1.25rem;
-            margin-bottom: 2rem;
-            opacity: 0.9;
+            font-size: 1.3rem;
+            margin-bottom: 2.5rem;
+            opacity: 0.95;
+        }
+
+        .cta-group {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
         }
 
         .btn-main {
             display: inline-block;
-            background-color: var(--secondary);
+            background-color: var(--accent);
             color: var(--primary);
             text-decoration: none;
-            padding: 0.8rem 2rem;
+            padding: 1rem 2.5rem;
             font-size: 1.1rem;
-            font-weight: bold;
-            border-radius: 4px;
-            transition: background 0.3s;
+            font-weight: 700;
+            border-radius: 6px;
+            transition: transform 0.2s;
+            box-shadow: 0 4px 15px rgba(245, 158, 11, 0.3);
         }
 
         .btn-main:hover {
-            background-color: #ca8a04;
+            transform: translateY(-2px);
         }
 
-        /* O Firmie */
+        .btn-secondary {
+            display: inline-block;
+            background-color: transparent;
+            color: var(--white);
+            text-decoration: none;
+            padding: 1rem 2.5rem;
+            font-size: 1.1rem;
+            font-weight: 700;
+            border-radius: 6px;
+            border: 2px solid var(--white);
+            transition: background 0.2s;
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--white);
+            color: var(--primary);
+        }
+
+        /* O Firmie / Opis Główny */
         .about {
-            padding: 5rem 2rem 2rem;
-            max-width: 900px;
+            padding: 6rem 2rem;
+            max-width: 1000px;
             margin: 0 auto;
             text-align: center;
+        }
+
+        .about h5 {
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
         }
 
         .about h2 {
-            font-size: 2.2rem;
+            font-size: 2.5rem;
             color: var(--primary);
             margin-bottom: 1.5rem;
+            font-weight: 800;
         }
 
-        /* Usługi */
-        .services {
-            padding: 3rem 2rem 5rem;
-            max-width: 1200px;
+        .about p {
+            font-size: 1.15rem;
+            color: var(--text-dark);
+            max-width: 850px;
             margin: 0 auto;
         }
 
-        .section-title {
-            text-align: center;
-            font-size: 2.2rem;
-            color: var(--primary);
-            margin-bottom: 3rem;
+        /* Sekcja: 6 Powodów */
+        .reasons-section {
+            background-color: var(--bg-light);
+            padding: 6rem 2rem;
         }
 
-        .grid {
+        .reasons-grid {
+            max-width: 1200px;
+            margin: 0 auto;
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2.5rem;
         }
 
-        .card {
-            background: var(--light);
+        .reason-card {
+            background: var(--white);
             padding: 2.5rem 2rem;
-            border-radius: 6px;
-            border-top: 4px solid var(--secondary);
-            transition: transform 0.3s;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+            border-left: 4px solid var(--accent);
         }
 
-        .card:hover {
-            transform: translateY(-5px);
-        }
-
-        .card h3 {
-            margin-bottom: 1rem;
+        .reason-card h4 {
+            font-size: 1.25rem;
             color: var(--primary);
+            margin-bottom: 0.75rem;
+            font-weight: 700;
         }
 
-        /* Sekcja Kontakt */
+        .reason-card p {
+            color: #64748b;
+            font-size: 1rem;
+        }
+
+        /* Sekcja Kontakt i Formularz (Split Layout) */
         .contact-section {
-            background-color: var(--light);
-            padding: 5rem 2rem;
+            padding: 6rem 2rem 4rem;
         }
 
         .contact-container {
             max-width: 1200px;
             margin: 0 auto;
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 3rem;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 4rem;
         }
 
         .contact-info h2 {
-            font-size: 2.2rem;
-            margin-bottom: 1.5rem;
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
             color: var(--primary);
+            font-weight: 800;
         }
 
         .info-block {
-            margin-bottom: 1.5rem;
+            margin-bottom: 2rem;
         }
 
         .info-block h6 {
-            font-size: 1rem;
-            color: #4b5563;
+            font-size: 0.85rem;
+            color: #64748b;
             text-transform: uppercase;
-            margin-bottom: 0.25rem;
+            letter-spacing: 1px;
+            margin-bottom: 0.5rem;
         }
 
         .info-block p, .info-block a {
-            font-size: 1.2rem;
+            font-size: 1.25rem;
             color: var(--primary);
-            font-weight: 600;
+            font-weight: 700;
             text-decoration: none;
         }
 
-        .info-block a.phone-link {
-            color: #16a34a; /* Zielony kolor wyróżniający opcję dzwonienia */
-            display: inline-block;
-            border-bottom: 2px dashed #16a34a;
+        .info-block a.phone-button {
+            background-color: var(--success);
+            color: var(--white);
+            display: inline-flex;
+            align-items: center;
+            padding: 0.8rem 1.8rem;
+            border-radius: 6px;
+            font-size: 1.1rem;
+            box-shadow: 0 4px 12px rgba(22, 163, 74, 0.15);
+            transition: background 0.2s;
         }
 
-        /* Formularz kontaktowy */
+        .info-block a.phone-button:hover {
+            background-color: #15803d;
+        }
+
+        /* Formularz */
+        .contact-form {
+            background-color: var(--bg-light);
+            padding: 3rem;
+            border-radius: 8px;
+            border: 1px solid #e2e8f0;
+        }
+
         .contact-form h3 {
             font-size: 1.5rem;
-            margin-bottom: 1rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary);
+            font-weight: 700;
         }
 
         .form-group {
@@ -224,34 +293,54 @@
 
         .form-group input, .form-group textarea {
             width: 100%;
-            padding: 0.8rem;
-            border: 1px solid #d1d5db;
-            border-radius: 4px;
+            padding: 0.9rem;
+            border: 1px solid #cbd5e1;
+            border-radius: 6px;
             font-size: 1rem;
+            background-color: var(--white);
+        }
+
+        .form-group input:focus, .form-group textarea:focus {
+            outline: none;
+            border-color: var(--accent);
         }
 
         .btn-submit {
             background-color: var(--primary);
             color: var(--white);
             border: none;
-            padding: 0.8rem 2rem;
-            font-size: 1rem;
-            font-weight: bold;
-            border-radius: 4px;
+            padding: 1rem 2rem;
+            font-size: 1.1rem;
+            font-weight: 700;
+            border-radius: 6px;
             cursor: pointer;
             width: 100%;
-            transition: background 0.3s;
+            transition: background 0.2s;
         }
 
         .btn-submit:hover {
-            background-color: var(--dark);
+            background-color: #0f172a;
+        }
+
+        /* Sekcja z Mapą Google */
+        .map-section {
+            width: 100%;
+            height: 400px;
+            background-color: #cbd5e1;
+            position: relative;
+        }
+
+        .map-section iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
         }
 
         /* Stopka */
         footer {
             background-color: var(--primary);
             color: var(--white);
-            padding: 3rem 2rem 1.5rem;
+            padding: 4rem 2rem 2rem;
         }
 
         .footer-content {
@@ -261,84 +350,33 @@
             justify-content: space-between;
             flex-wrap: wrap;
             gap: 2rem;
-            border-bottom: 1px solid #374151;
+            border-bottom: 1px solid #334155;
             padding-bottom: 2rem;
         }
 
         .footer-legal p {
-            font-size: 0.9rem;
-            color: #9ca3af;
-            margin-bottom: 0.3rem;
+            font-size: 0.95rem;
+            color: #94a3b8;
+            margin-bottom: 0.4rem;
         }
 
         .copyright {
             text-align: center;
-            padding-top: 1.5rem;
-            font-size: 0.85rem;
-            color: #9ca3af;
+            padding-top: 2rem;
+            font-size: 0.9rem;
+            color: #64748b;
+        }
+
+        /* RWD na telefony */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.2rem; }
+            .hero p { font-size: 1.1rem; }
+            nav a:not(.btn-nav) { display: none; }
+            .contact-form { padding: 1.5rem; }
+            .map-section { height: 300px; }
         }
     </style>
 </head>
 <body>
 
     <header>
-        <div class="nav-container">
-            <div class="logo">BAT <span>Bouw</span></div>
-            <nav>
-                <a href="#home">Home</a>
-                <a href="#over-ons">Over ons</a>
-                <a href="#diensten">Diensten</a>
-                <a href="#contact" class="btn-nav">Contact</a>
-            </nav>
-        </div>
-    </header>
-
-    <section class="hero" id="home">
-        <div class="hero-content">
-            <h1>Professionele aannemer</h1>
-            <p>Kwaliteit, betrouwbaarheid en echt vakmanschap. Wij realiseren uw grote en kleine projecten van A tot Z.</p>
-            <a href="tel:+31600000000" class="btn-main">Bel direct</a>
-        </div>
-    </section>
-
-    <section class="about" id="over-ons">
-        <h2>Over het bedrijf</h2>
-        <p>Sinds 2018 zijn wij actief in de algemene bouw- en renovatiesector in heel Nederland. Dankzij onze jarenlange ervaring leveren wij topkwaliteit, strakke afwerking en betrouwbaarheid. Ons ervaren team van vakmensen en timmerlieden staat klaar om uw project professioneel uit te voeren. Wij werken in opdracht van zowel particuliere klanten als grote en kleine bedrijven. Wij denken graag met u mee!</p>
-    </section>
-
-    <section class="services" id="diensten">
-        <h2 class="section-title">Onze Werkzaamheden</h2>
-        <div class="grid">
-            <div class="card">
-                <h3>🔨 Renovatie & Verbouw</h3>
-                <p>Complete modernisering en verbouwing van uw woning, appartement of bedrijfspand met een strak resultaat.</p>
-            </div>
-            <div class="card">
-                <h3>📐 Timmer- & Schilderwerk</h3>
-                <p>Vakkundig timmerwerk op maat en professioneel binnen- en buitenschilderwerk van hoge kwaliteit.</p>
-            </div>
-            <div class="card">
-                <h3>🧱 Tegels & Constructies</h3>
-                <p>Nauwkeurig tegelzetten, kabelvervanging en de realisatie van diverse grote en kleine bouwconstructies.</p>
-            </div>
-        </div>
-    </section>
-
-    <section class="contact-section" id="contact">
-        <div class="contact-container">
-            <div class="contact-info">
-                <h2>Contacten</h2>
-                
-                <div class="info-block">
-                    <h6>Telefoon</h6>
-                    <!-- Funkcja Click-to-Call: Zastąp +31600000000 swoim numerem -->
-                    <p><a href="tel:+31600000000" class="phone-link">Bel vandaag nog</a></p>
-                </div>
-
-                <div class="info-block">
-                    <h6>E-mail</h6>
-                    <p><a href="mailto:info@batperfectbouw.nl">info@batperfectbouw.nl</a></p>
-                </div>
-
-                <div class="info-block">
-                    <h6>Werkuren</h6>
