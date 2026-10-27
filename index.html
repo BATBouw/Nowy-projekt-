@@ -1,386 +1,304 @@
 <!DOCTYPE html>
-<html lang="nl">
+<html  >
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BAT Bouw | Uw Professionele Aannemer</title>
-    <style>
-        :root {
-            --primary: #1e293b; 
-            --accent: #f59e0b;  
-            --text-dark: #334155;
-            --bg-light: #f8fafc;
-            --white: #ffffff;
-            --success: #16a34a; 
-        }
+  <!-- Site made with Mobirise Website Builder v5.9.18, https://mobirise.com -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Mobirise v5.9.18, mobirise.com">
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:image:src" content="assets/images/index-meta.png">
+  <meta property="og:image" content="assets/images/index-meta.png">
+  <meta name="twitter:title" content="BAT Bouw">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+  <link rel="shortcut icon" href="assets/images/png-1-137x137.png" type="image/x-icon">
+  <meta name="description" content="Construction Services">
+  
+  
+  <title>BAT Bouw</title>
+  <link rel="stylesheet" href="assets/web/assets/mobirise-icons2/mobirise2.css">
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-grid.min.css">
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-reboot.min.css">
+  <link rel="stylesheet" href="assets/dropdown/css/style.css">
+  <link rel="stylesheet" href="assets/socicon/css/styles.css">
+  <link rel="stylesheet" href="assets/theme/css/style.css">
+  <link rel="preload" href="https://fonts.googleapis.com/css?family=Jost:100,200,300,400,500,600,700,800,900,100i,200i,300i,400i,500i,600i,700i,800i,900i&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Jost:100,200,300,400,500,600,700,800,900,100i,200i,300i,400i,500i,600i,700i,800i,900i&display=swap"></noscript>
+  <link rel="preload" as="style" href="assets/mobirise/css/mbr-additional.css?v=a3a8tL"><link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css?v=a3a8tL" type="text/css">
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', system-ui, sans-serif;
-            scroll-behavior: smooth;
-        }
-
-        body {
-            color: var(--text-dark);
-            background-color: var(--white);
-            line-height: 1.6;
-        }
-
-        header {
-            background-color: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05);
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-            border-bottom: 1px solid #e2e8f0;
-        }
-
-        .nav-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1.2rem 2rem;
-        }
-
-        .logo {
-            font-size: 1.4rem;
-            font-weight: 900;
-            color: var(--primary);
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        .logo span {
-            color: var(--accent);
-        }
-
-        nav a {
-            text-decoration: none;
-            color: var(--primary);
-            margin-left: 1.5rem;
-            font-weight: 600;
-            transition: color 0.2s;
-        }
-
-        nav a:hover {
-            color: var(--accent);
-        }
-
-        .btn-nav {
-            background-color: var(--primary);
-            color: var(--white) !important;
-            padding: 0.6rem 1.2rem;
-            border-radius: 6px;
-        }
-
-        .hero {
-            background: linear-gradient(rgba(30, 41, 59, 0.85), rgba(30, 41, 59, 0.7)), 
-                        url('https://unsplash.com') no-repeat center center/cover;
-            height: 70vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: var(--white);
-            padding: 0 2rem;
-            margin-top: 70px;
-        }
-
-        .hero-content {
-            max-width: 800px;
-        }
-
-        .hero h1 {
-            font-size: 3.2rem;
-            margin-bottom: 1rem;
-            font-weight: 800;
-            line-height: 1.2;
-        }
-
-        .hero p {
-            font-size: 1.3rem;
-            margin-bottom: 2.5rem;
-            opacity: 0.95;
-        }
-
-        .cta-group {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        .btn-main {
-            display: inline-block;
-            background-color: var(--accent);
-            color: var(--primary);
-            text-decoration: none;
-            padding: 1rem 2.5rem;
-            font-size: 1.1rem;
-            font-weight: 700;
-            border-radius: 6px;
-            transition: transform 0.2s;
-            box-shadow: 0 4px 15px rgba(245, 158, 11, 0.3);
-        }
-
-        .btn-main:hover {
-            transform: translateY(-2px);
-        }
-
-        .btn-secondary {
-            display: inline-block;
-            background-color: transparent;
-            color: var(--white);
-            text-decoration: none;
-            padding: 1rem 2.5rem;
-            font-size: 1.1rem;
-            font-weight: 700;
-            border-radius: 6px;
-            border: 2px solid var(--white);
-            transition: background 0.2s;
-        }
-
-        .btn-secondary:hover {
-            background-color: var(--white);
-            color: var(--primary);
-        }
-
-        .about {
-            padding: 5rem 2rem;
-            max-width: 1000px;
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        .about h5 {
-            color: var(--accent);
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            font-size: 0.9rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .about h2 {
-            font-size: 2.5rem;
-            color: var(--primary);
-            margin-bottom: 1.5rem;
-            font-weight: 800;
-        }
-
-        .about p {
-            font-size: 1.15rem;
-            color: var(--text-dark);
-            max-width: 850px;
-            margin: 0 auto;
-        }
-
-        .reasons-section {
-            background-color: var(--bg-light);
-            padding: 5rem 2rem;
-        }
-
-        .section-title {
-            text-align: center;
-            font-size: 2.3rem;
-            color: var(--primary);
-            margin-bottom: 3.5rem;
-            font-weight: 800;
-        }
-
-        .reasons-grid {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 2.5rem;
-        }
-
-        .reason-card {
-            background: var(--white);
-            padding: 2.5rem 2rem;
-            border-radius: 8px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
-            border-left: 4px solid var(--accent);
-        }
-
-        .reason-card h4 {
-            font-size: 1.25rem;
-            color: var(--primary);
-            margin-bottom: 0.75rem;
-            font-weight: 700;
-        }
-
-        .reason-card p {
-            color: #64748b;
-            font-size: 1rem;
-        }
-
-        .contact-section {
-            padding: 5rem 2rem 4rem;
-        }
-
-        .contact-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 4rem;
-        }
-
-        .contact-info h2 {
-            font-size: 2.5rem;
-            margin-bottom: 2rem;
-            color: var(--primary);
-            font-weight: 800;
-        }
-
-        .info-block {
-            margin-bottom: 2rem;
-        }
-
-        .info-block h6 {
-            font-size: 0.85rem;
-            color: #64748b;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 0.5rem;
-        }
-
-        .info-block p, .info-block a {
-            font-size: 1.25rem;
-            color: var(--primary);
-            font-weight: 700;
-            text-decoration: none;
-        }
-
-        .info-block a.phone-button {
-            background-color: var(--success);
-            color: var(--white);
-            display: inline-flex;
-            align-items: center;
-            padding: 0.8rem 1.8rem;
-            border-radius: 6px;
-            font-size: 1.1rem;
-            box-shadow: 0 4px 12px rgba(22, 163, 74, 0.15);
-            transition: background 0.2s;
-        }
-
-        .info-block a.phone-button:hover {
-            background-color: #15803d;
-        }
-
-        .contact-form {
-            background-color: var(--bg-light);
-            padding: 3rem;
-            border-radius: 8px;
-            border: 1px solid #e2e8f0;
-        }
-
-        .contact-form h3 {
-            font-size: 1.5rem;
-            margin-bottom: 1.5rem;
-            color: var(--primary);
-            font-weight: 700;
-        }
-
-        .form-group {
-            margin-bottom: 1.2rem;
-        }
-
-        .form-group input, .form-group textarea {
-            width: 100%;
-            padding: 0.9rem;
-            border: 1px solid #cbd5e1;
-            border-radius: 6px;
-            font-size: 1rem;
-            background-color: var(--white);
-        }
-
-        .form-group input:focus, .form-group textarea:focus {
-            outline: none;
-            border-color: var(--accent);
-        }
-
-        .btn-submit {
-            background-color: var(--primary);
-            color: var(--white);
-            border: none;
-            padding: 1rem 2rem;
-            font-size: 1.1rem;
-            font-weight: 700;
-            border-radius: 6px;
-            cursor: pointer;
-            width: 100%;
-            transition: background 0.2s;
-        }
-
-        .btn-submit:hover {
-            background-color: #0f172a;
-        }
-
-        .map-section {
-            width: 100%;
-            height: 400px;
-            background-color: #cbd5e1;
-        }
-
-        .map-section iframe {
-            width: 100%;
-            height: 100%;
-            border: none;
-        }
-
-        footer {
-            background-color: var(--primary);
-            color: var(--white);
-            padding: 4rem 2rem 2rem;
-        }
-
-        .footer-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            gap: 2rem;
-            border-bottom: 1px solid #334155;
-            padding-bottom: 2rem;
-        }
-
-        .footer-legal p {
-            font-size: 0.95rem;
-            color: #94a3b8;
-            margin-bottom: 0.4rem;
-        }
-
-        .copyright {
-            text-align: center;
-            padding-top: 2rem;
-            font-size: 0.9rem;
-            color: #64748b;
-        }
-
-        @media (max-width: 768px) {
-            .hero h1 { font-size: 2.2rem; }
-            .hero p { font-size: 1.1rem; }
-            nav a:not(.btn-nav) { display: none; }
-            .contact-form { padding: 1.5rem; }
-            .map-section { height: 300px; }
-        }
-    </style>
+  
+  
+  
 </head>
 <body>
+  
+  <section data-bs-version="5.1" class="menu menu2 cid-sFCw1qGFAI" once="menu" id="menu2-23">
+    
+    <nav class="navbar navbar-dropdown collapsed">
+        <div class="container">
+            <div class="navbar-brand">
+                <span class="navbar-logo">
+                    
+                        <img src="assets/images/png-1-137x137.webp" alt="" style="height: 6.1rem;">
+                    
+                </span>
+                <span class="navbar-caption-wrap"><a class="navbar-caption text-black text-primary display-7">BAT BOUW</a></span>
+            </div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbarSupportedContent" data-bs-target="#navbarSupportedContent" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav nav-dropdown nav-right" data-app-modern-menu="true"><li class="nav-item"><a class="nav-link link text-black text-primary display-4" href="#top">Thuis</a></li><li class="nav-item"><a class="nav-link link text-black text-primary display-4" href="index.html#features1-1i"></a></li>
+                    <li class="nav-item"><a class="nav-link link text-black text-primary display-4" href="index.html#header14-1j">Over</a></li>
+                    <li class="nav-item"><a class="nav-link link text-black text-primary display-4" href="index.html#content4-1q"></a>
+                    </li><li class="nav-item"><a class="nav-link link text-black text-primary display-4" href="index.html#team1-1o"></a></li><li class="nav-item"><a class="nav-link link text-black text-primary display-4" href="index.html#contacts2-1r">Contacten</a></li></ul>
+                
+                
+            </div>
+        </div>
+    </nav>
+</section>
 
-    <header>
-        <div class="nav-container">
-            <div class="logo">BAT <span>Bouw</span></div>
-            <nav>
-                <a href="#home">Home</a>
-                <a href="#over-ons">Over ons</a>
-                <a href="#waarom-wij">Waarom wij</a>
+<section data-bs-version="5.1" class="header14 cid-sFzxmVl7J6" id="header14-1f">
+
+    
+
+    
+
+    <div class="container">
+        <div class="row justify-content-center align-items-center">
+            <div class="col-12 col-md-5 image-wrapper">
+                <img src="assets/images/png-2-1000x1000.webp" alt="Mobirise Website Builder">
+            </div>
+            <div class="col-12 col-md">
+                <div class="text-wrapper">
+                    <h1 class="mbr-section-title mbr-fonts-style mb-3 display-1"><strong>Professionele aannemer</strong></h1>
+                    <p class="mbr-text mbr-fonts-style display-7"><br>Wij zijn een team van timmerlieden. Wij hebben gewerkt aan grote en kleine projecten in Nederland. Wij werken zowel voor  kleine bedrijf en groten als voor particuliere opdrachtgevers. Wij nodigen u van harte uit om kennis te nemen van het aanbod<br>werken zoals renovatie,verbouw,timmerwerk,schilderwerk ,kabel vervanging ,tegels,grote en kleine constructies en gebouwen<br></p>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section data-bs-version="5.1" class="header14 cid-sFzz5E692j" id="header14-1j">
+
+    
+
+    
+
+    <div class="container">
+        <div class="row justify-content-center align-items-center">
+            <div class="col-12 col-md-6 image-wrapper">
+                <img src="assets/images/mbr-1076x808.webp" alt="">
+            </div>
+            <div class="col-12 col-md">
+                <div class="text-wrapper">
+                    <h1 class="mbr-section-title mbr-fonts-style mb-3 display-2"><strong>Over het bedrijf</strong></h1>
+                    <p class="mbr-text mbr-fonts-style display-7"><br>Wij runnen ons bedrijf sinds 2018 tot op de dag van vandaag, wij zitten in de algemene bouwafdeling, als u meer informatie wilt, neem dan contact met ons op door een e-mail te sturen, wij zullen proberen u te helpen</p>
+                    <div class="mbr-section-btn mt-3"><a class="btn btn-primary display-4" href="mailto:batperfectbouw@gmail.com">e-mail verzenden</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section data-bs-version="5.1" class="content10 cid-sFAZRnJnnI" id="content10-22">
+    
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md">
+                
+                <h6 class="mbr-section-subtitle mbr-fonts-style mb-4 display-2"><strong>Waarom kiezen klanten voor ons?</strong></h6>
+            </div>
+            <div class="col-md-12 col-lg-6">
+                <p class="mbr-text mbr-fonts-style display-7">Wij verzorgen kleine en grote projecten en leveren veel tevreden klanten.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section data-bs-version="5.1" class="form5 cid-sFzDs3t9EG" id="form5-1m">
+    
+    
+    <div class="container">
+        <div class="mbr-section-head">
+            <h3 class="mbr-section-title mbr-fonts-style align-center mb-0 display-2"><strong>Schrijf ons een bericht</strong></h3>
+            <h4 class="mbr-section-subtitle mbr-fonts-style align-center mb-0 mt-2 display-7">Wij proberen zo snel mogelijk te reageren.</h4>
+        </div>
+        <div class="row justify-content-center mt-4">
+            <div class="col-lg-8 mx-auto mbr-form" data-form-type="formoid">
+                <form action="https://mobirise.eu/" method="POST" class="mbr-form form-with-styler" data-form-title="Form Name"><input type="hidden" name="email" data-form-email="true" value="mNhL4Fkwe/AnDk5FSjRvMF4sxdTyYghOnxv0VIZ/86SPUsUfVgEPM4rXbGyUocmmlsdw400LH7wYQZox0CaEZIJiFsz6VGCWAKcwtNBUwTCgao2Xn+tkrsbkC9sd6IEB">
+                    <div class="row">
+                        <div hidden="hidden" data-form-alert="" class="alert alert-success col-12">Bedankt voor het invullen
+van het formulier!</div>
+                        <div hidden="hidden" data-form-alert-danger="" class="alert alert-danger col-12">Oops...! some
+                            problem!</div>
+                    </div>
+                    <div class="dragArea row">
+                        <div class="col-md col-sm-12 form-group mb-3" data-for="name">
+                            <input type="text" name="name" placeholder="Naam" data-form-field="name" class="form-control" value="" id="name-form5-1m">
+                        </div>
+                        <div class="col-md col-sm-12 form-group mb-3" data-for="email">
+                            <input type="email" name="email" placeholder="E-mail" data-form-field="email" class="form-control" value="" id="email-form5-1m">
+                        </div>
+                        
+                        <div class="col-12 form-group mb-3" data-for="textarea">
+                            <textarea name="textarea" placeholder="Bericht" data-form-field="textarea" class="form-control" id="textarea-form5-1m"></textarea>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 align-center mbr-section-btn"><button type="submit" class="btn btn-primary display-4">Send message</button></div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section data-bs-version="5.1" class="contacts2 cid-sFzIA7KGYz" id="contacts2-1r">
+    <!---->
+    
+    
+    <div class="container">
+        <div class="mbr-section-head">
+            <h3 class="mbr-section-title mbr-fonts-style align-center mb-0 display-2">
+                <strong>Contacten</strong>
+            </h3>
+            <h4 class="mbr-section-subtitle mbr-fonts-style align-center mb-0 mt-2 display-7">&nbsp;&nbsp;</h4>
+        </div>
+        <div class="row justify-content-center mt-4">
+            <div class="card col-12 col-md-6">
+                <div class="card-wrapper">
+                    <div class="image-wrapper">
+                        <span class="mbr-iconfont mobi-mbri-phone mobi-mbri"></span>
+                    </div>
+                    <div class="text-wrapper">
+                        <h6 class="card-title mbr-fonts-style mb-1 display-5"><strong>Telefoon</strong></h6>
+                        <p class="mbr-text mbr-fonts-style display-4"><a href="tel:+31640569964" class="text-primary">Bel vandaag nog</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="card col-12 col-md-6">
+                <div class="card-wrapper">
+                    <div class="image-wrapper">
+                        <span class="mbr-iconfont mobi-mbri-letter mobi-mbri"></span>
+                    </div>
+                    <div class="text-wrapper">
+                        <h6 class="card-title mbr-fonts-style mb-1 display-5">
+                            <strong>E-mail</strong>
+                        </h6>
+                        <p class="mbr-text mbr-fonts-style display-7">
+                            <a href="mailto:info@batperfectbouw.nl" class="text-primary">info@batperfectbouw.nl</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="card col-12 col-md-6">
+                <div class="card-wrapper">
+                    <div class="image-wrapper">
+                        <span class="mbr-iconfont mobi-mbri-globe mobi-mbri"></span>
+                    </div>
+                    <div class="text-wrapper">
+                        <h6 class="card-title mbr-fonts-style mb-1 display-5">
+                            <strong>Adres</strong></h6>
+                        <p class="mbr-text mbr-fonts-style display-7"><br><a href="https://maps.app.goo.gl/C8YQGePtqQzB3Ndr9?g_st=ic" class="text-primary" target="_blank">Bedrijfsadres</a><br><br></p>
+                    </div>
+                </div>
+            </div>
+            <div class="card col-12 col-md-6">
+                <div class="card-wrapper">
+                    <div class="image-wrapper">
+                        <span class="mbr-iconfont mobi-mbri-bulleted-list mobi-mbri"></span>
+                    </div>
+                    <div class="text-wrapper">
+                        <h6 class="card-title mbr-fonts-style mb-1 display-5">
+                            <strong>Werkuren&nbsp;</strong></h6>
+                        <p class="mbr-text mbr-fonts-style display-7">Maandag tot&nbsp; vrijdag <br>7:00 - 16:00
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section data-bs-version="5.1" class="map2 cid-sFAxp7Y5iM" id="map2-1y">
+    
+    
+    <div>
+        
+  
+<div class="google-map">
+  <iframe
+    frameborder="0"
+    style="border:0"
+    src="https://www.google.com/maps?q=Voorofscheweg%20203%2C%202771%20MJ%20Boskoop%2C%20Nederland&t=k&output=embed"
+    allowfullscreen
+    loading="lazy">
+  </iframe>
+</div> 
+
+
+</div> 
+    </div>
+</section>
+
+<section data-bs-version="5.1" class="footer3 cid-sFCygHrmNf" once="footers" id="footer3-24">
+
+    
+
+    
+
+    <div class="container">
+        <div class="row align-center mbr-white">
+            <div class="row row-links">
+                <ul class="foot-menu">
+                    
+                    
+                    
+                    
+                    
+                <li class="foot-menu-item mbr-fonts-style display-7"><a href="#top" class="text-white">Thuis</a></li></ul>
+            </div>
+            
+            <div class="row row-copirayt">
+                <p class="mbr-text mb-0 mbr-fonts-style mbr-white align-center display-7">
+                    © Copyright 2018 - 2036. Alle rechten voorbehouden.
+                </p>
+            </div>
+        </div>
+    </div>
+</section><section id="hide-footer" class="display-7" style="padding: 0;align-items: center;justify-content: center;flex-wrap: wrap;    align-content: center;display: flex;position: relative;height: 4rem;"><a href="https://mobiri.se/" style="flex: 1 1;height: 4rem;position: absolute;width: 100%;z-index: 1;"><img alt="" style="height: 4rem;" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="></a><p style="margin: 0;text-align: center;" class="display-7">&#8204;</p><a style="z-index:1" href="https://mobirise.com/builder/ai-website-builder.html">Free AI Website Builder</a></section><script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>  <script src="assets/smoothscroll/smooth-scroll.js"></script>  <script src="assets/ytplayer/index.js"></script>  <script src="assets/dropdown/js/navbar-dropdown.js"></script>  <script src="assets/theme/js/script.js"></script>  <script src="assets/formoid/formoid.min.js"></script>  
+
+ <style>
+#hide-footer{display: none !important;}
+</style>
+ 
+<!-- Pływający przycisk Tłumacza Google -->
+<div
+  id="google_translate_element"
+  style="position:fixed;bottom:20px;right:20px;z-index:999999;
+  background:#fff;padding:10px;border-radius:8px;
+  border:1px solid #ddd;box-shadow:0 4px 12px rgba(0,0,0,.15);">
+</div>
+
+<script>
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({
+    pageLanguage: 'nl',
+    includedLanguages: 'nl,pl,en,de,fr',
+    layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+    autoDisplay: false
+  }, 'google_translate_element');
+}
+</script>
+
+<script
+  src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+</script>
+</body>
+</html>
